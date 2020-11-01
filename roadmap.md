@@ -181,7 +181,7 @@ extension MyActor {
     print(other.mutableArray.first)
     
     // allowed: async functions can call async functions on other actors
-    other.asyncFunction(other: self)
+    await other.asyncFunction(other: self)
     
     // error: only asynchronous functions can be called from outside the actor
     other.synchronousFunction()    
